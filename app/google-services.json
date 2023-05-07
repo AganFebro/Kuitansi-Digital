@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402976817552",
+    "project_id": "febrian-pmo-lab",
+    "storage_bucket": "febrian-pmo-lab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402976817552:android:9b69c6a698c9fa54fd3315",
+        "android_client_info": {
+          "package_name": "crud.if21f.crud2_21sa1247"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402976817552-ao533covso2s9gcgu61qu5gake7pulmb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjOgK8nMkHRxfZV8qHfrK4QgvwQ1K_hhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402976817552-ao533covso2s9gcgu61qu5gake7pulmb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

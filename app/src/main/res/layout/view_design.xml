@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="25dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginBottom="20dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/list_item"
+    android:backgroundTint="#FFCA28"
+    android:background="@drawable/btn_rounded">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/gambar"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:contentDescription="To do"
+        app:srcCompat="@drawable/people">
+    </ImageView>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="4dp"
+                android:text="NIM"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/nim_text"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nim"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="1dp"
+                android:text="NIM"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Nama Lengkap"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nama"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Nama"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Fakultas"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fakultas"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Fakultas"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Program Studi"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/prodi"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Program Studi"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Golongan Darah"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hasilgol"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Golongan Darah"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rjeniskelamin"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Tanggal Lahir"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tgllahir"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Tanggal Lahir"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="No. HP"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nohp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="No HP"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Alamat Email"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/crudemail"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Nilai IPK"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ipk"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="IPK"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp"
+                android:text="Alamat Rumah"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/ibmplexsans_bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alamat"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="1dp"
+                android:text="Alamat"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibmplexsans_medium">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

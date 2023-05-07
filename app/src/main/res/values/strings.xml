@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Jual Beli Gambar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Febrian Avien Wibowo</string>
+    <string name="nav_header_subtitle">febrian.aw20@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Menu Utama</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Daftar Mahasiswa</string>
+
+    <string-array name="listFakultas">
+        <item>Ilmu Komputer</item>
+        <item>Bisnis dan Ilmu Sosial</item>
+    </string-array>
+
+    <string-array name="listProdi">
+        <item>Informatika</item>
+        <item>Sistem Informasi</item>
+        <item>Teknologi Informasi</item>
+        <item>Bisnis Digital</item>
+        <item>Ilmu Komunikasi</item>
+        <item>Bahasa Inggris</item>
+    </string-array>
+
+    <string name="et_login_email"><font size="12">Email</font></string>
+    <string name="et_login_password"><font size="12">Password</font></string>
+    <string name="et_login_otp"><font size="12">OTP</font></string>
+    <string name="et_login_password_2"><font size="12">Ulangi Password</font></string>
+    <string name="et_login_nohp"><font size="12">No HP</font></string>
+    <string name="et_otp_nohp"><font size="12">No HP</font></string>
+    <string name="et_otp_nootp"><font size="12">Kode OTP</font></string>
+    <string name="et_lupa_email"><font size="12">Email</font></string>
+    <string name="et_lupa_password"><font size="12">Password Baru</font></string>
+    <string name="et_lupa_password2"><font size="12">Password Baru (Ulangi)</font></string>
+    <string name="et_crud_nohp"><font size="16">08xxxxx</font></string>
+
+</resources>

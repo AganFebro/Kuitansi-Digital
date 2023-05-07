@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="@font/playfair_bold"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="32dp"
+            android:textColor="#7E57C2"
+            android:text="Verifikasi OTP"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="start"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="@font/playfair_italic"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#7E57C2"
+            android:text="Sebelum Melanjutkan Registrasi, Verifikasi OTP untuk Menghindari Spam"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="start"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/idEdtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_medium"
+            android:padding="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/et_otp_nohp"
+            android:importantForAutofill="no"
+            android:inputType="phone" />
+
+        <!--Button for getting OTP-->
+        <Button
+            android:id="@+id/idBtnGetOtp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_bold"
+            android:layout_margin="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_rounded"
+            android:text="Kirim OTP"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </LinearLayout>
+
+        <!--Edittext for getting otp from user-->
+        <EditText
+            android:id="@+id/idEdtOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_medium"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:padding="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/et_otp_nootp"
+            android:importantForAutofill="no"
+            android:inputType="phone" />
+
+        <!--button for verifying user OTP-->
+        <Button
+            android:id="@+id/idBtnVerify"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_rounded"
+            android:fontFamily="@font/playfair_bold"
+            android:text="Verifikasi OTP"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</LinearLayout>

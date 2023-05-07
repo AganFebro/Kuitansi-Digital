@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:fontFamily="@font/playfair_bold"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="32dp"
+                android:textColor="#7E57C2"
+                android:text="Sign In"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="start"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:fontFamily="@font/playfair_italic"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="#9081AC"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="Masuk ke Akun Yang Terdaftar"
+                android:gravity="start"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair_medium"
+                android:hint="@string/et_login_email"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:padding="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/email_login"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair_medium"
+                android:hint="@string/et_login_password"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/password_login"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/playfair_bold"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/btn_rounded"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/btn_login"
+                    android:textSize="13dp"
+                    android:text="Sign In" />
+                <Button
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/playfair_bold"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/btn_rounded"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/btn_login_otp"
+                    android:textSize="13dp"
+                    android:text="Sign In OTP" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="160dp"
+                    android:fontFamily="@font/playfair_regular"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/forget_password"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:text="Lupa Password"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/playfair_regular"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:id="@+id/signup_reg"
+                    android:padding="5dp"
+                    android:text="Daftar Akun Baru"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="160dp"
+                    android:fontFamily="@font/playfair_regular"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/main_debug"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:text="Bypass"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
