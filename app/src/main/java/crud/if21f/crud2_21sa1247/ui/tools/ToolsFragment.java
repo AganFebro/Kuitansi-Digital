@@ -1,6 +1,8 @@
 package crud.if21f.crud2_21sa1247.ui.tools;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,7 +59,35 @@ public class ToolsFragment extends Fragment {
         GetData("");
         MyRecycleView();
 
+
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        searchView = view.findViewById(R.id.ed_search);
+        searchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.toString().isEmpty()) {
+                    GetData(s.toString());
+                } else {
+                    adapter.getFilter().filter(s);
+                }
+            }
+        });
     }
 
     @Override
