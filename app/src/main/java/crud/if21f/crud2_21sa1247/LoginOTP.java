@@ -66,7 +66,7 @@ public class LoginOTP extends AppCompatActivity {
                 if (user != null && !TextUtils.isEmpty(user.getPhoneNumber())) {
                     // user sudah pernah login menggunakan nomor telepon dan nomor telepon sudah terverifikasi
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                    Toast.makeText(LoginOTP.this, "Welcome Back!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginOTP.this, "Welcome Back OTP!", Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
                     // kosong
