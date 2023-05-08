@@ -38,26 +38,5 @@
         android:id="@+id/datalist"
         android:scrollbars="vertical">
     </androidx.recyclerview.widget.RecyclerView>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/home1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="100dp"
-        android:src="@drawable/home">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fab"
-        android:layout_above="@+id/home1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="25dp"
-        android:src="@drawable/add">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </RelativeLayout>

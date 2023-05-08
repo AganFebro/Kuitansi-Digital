@@ -45,8 +45,6 @@ public class ListData extends AppCompatActivity {
         setContentView(R.layout.activity_list_data);
 
         recyclerView = findViewById(R.id.datalist);
-        fab = findViewById(R.id.fab);
-        home = findViewById(R.id.home1);
 
         GetData("");
 
@@ -73,22 +71,6 @@ public class ListData extends AppCompatActivity {
         });
 
         MyRecycleView();
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ListData.this, crud.class);
-                startActivity(intent);
-            }
-        });
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ListData.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     private void GetData(String data) {

@@ -28,9 +28,9 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/playfair_bold"
             android:textColor="@color/black"
-            android:textSize="20dp">
+            android:textSize="26dp">
         </TextView>
         <ProgressBar
             android:id="@+id/progress"

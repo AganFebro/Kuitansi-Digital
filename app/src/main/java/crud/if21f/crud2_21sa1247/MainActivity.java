@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-/*
+
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity  {
                     }
         });
 
- */
+
 /*
         binding.appBarMain.read.setOnClickListener(new View.OnClickListener() {
             @Override

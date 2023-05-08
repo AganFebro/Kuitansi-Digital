@@ -40,6 +40,8 @@ public class LoginOTP extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener Listener;
     private String getNohp, getPassword, verificationId;
+    private static final String KEY_VERIFICATION_ID = "key_verification_id";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,15 +56,20 @@ public class LoginOTP extends AppCompatActivity {
         forget_password = findViewById(R.id.forget_password);
         signup_reg = findViewById(R.id.signup_reg);
         auth = FirebaseAuth.getInstance();
+        EditText mEdit = findViewById(R.id.plusenamduaa);
+        mEdit.setEnabled(false);
 
-
-        Listener = new FirebaseAuth.AuthStateListener() {
+        Listener = new FirebaseAuth.AuthStateListener(){
             @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null && user.isEmailVerified()) {
-                    startActivity(new Intent(LoginOTP.this, MainActivity.class));
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null && !TextUtils.isEmpty(user.getPhoneNumber())) {
+                    // user sudah pernah login menggunakan nomor telepon dan nomor telepon sudah terverifikasi
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    Toast.makeText(LoginOTP.this, "Welcome Back!", Toast.LENGTH_SHORT).show();
                     finish();
+                } else {
+                    // kosong
                 }
             }
         };
@@ -97,6 +104,10 @@ public class LoginOTP extends AppCompatActivity {
             }
         });
 
+        if (verificationId == null && savedInstanceState != null) {
+            onRestoreInstanceState(savedInstanceState);
+        }
+
         TextView lupa=(TextView)findViewById(R.id.forget_password);
 
         lupa.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +122,7 @@ public class LoginOTP extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                startActivity(new Intent(LoginOTP.this, SignUpOTP.class));
+                startActivity(new Intent(LoginOTP.this, SignUp.class));
             }
         });
 
@@ -132,9 +143,20 @@ public class LoginOTP extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(KEY_VERIFICATION_ID,verificationId);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        verificationId = savedInstanceState.getString(KEY_VERIFICATION_ID);
+    }
     private void checkPhoneNumberExists(String phoneNumber) {
         // Get a reference to the Firebase User table
-        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("Admin/Mahasiswa");
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("Pengguna/List");
         // Query the Firebase User table to check if the phone number exists
         String phone = nohp_login.getText().toString();
         Query phoneQuery = userRef.orderByChild("nohp").equalTo(phone);
@@ -146,7 +168,7 @@ public class LoginOTP extends AppCompatActivity {
                         sendVerificationCode(phoneNumber);
                     } else {
                         // Phone number does not exist in Firebase, display an error message
-                        Toast.makeText(LoginOTP.this, "Daftarkan Nomor HP di Data Mahasiswa!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginOTP.this, "Nomor HP Tidak Terdaftar!", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -157,13 +179,10 @@ public class LoginOTP extends AppCompatActivity {
             }
         });
     }
-
-
     protected void onStart() {
         super.onStart();
         auth.addAuthStateListener(Listener);
     }
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -171,7 +190,6 @@ public class LoginOTP extends AppCompatActivity {
             auth.removeAuthStateListener(Listener);
         }
     }
-
     private void loginUserAccount() {
         auth.signInWithEmailAndPassword(getNohp, getPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -212,11 +230,11 @@ public class LoginOTP extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // if the code is correct and the task is successful
-                            // we are sending our user to new activity.
-                            Intent i = new Intent(LoginOTP.this, MainActivity.class);
-                            startActivity(i);
-                            finish();
+                                // if the code is correct and the task is successful
+                                // we are sending our user to new activity.
+                                Intent i = new Intent(LoginOTP.this, MainActivity.class);
+                                startActivity(i);
+                                finish();
                         } else {
                             // if the code is not correct then we are
                             // displaying an error message to the user.
@@ -238,7 +256,6 @@ public class LoginOTP extends AppCompatActivity {
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
-
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
             // initializing our callbacks for on

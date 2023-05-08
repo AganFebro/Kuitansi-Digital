@@ -48,24 +48,40 @@
                 android:layout_height="30dp">
             </LinearLayout>
 
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/et_login_nohp"
-                android:fontFamily="@font/playfair_medium"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/black"
-                android:padding="15dp"
+                android:orientation="horizontal"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:id="@+id/nohp_signup"
-                />
+                android:layout_marginEnd="30dp">
+                <EditText
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:hint="+62"
+                    android:gravity="start"
+                    android:fontFamily="@font/ibmplexsans_medium"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:padding="15dp"
+                    android:id="@+id/plusenamdua"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/et_login_nohp"
+                    android:fontFamily="@font/ibmplexsans_medium"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:padding="15dp"
+                    android:id="@+id/nohp_signup"
+                    />
+            </LinearLayout>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/et_login_email"
-                android:fontFamily="@font/playfair_medium"
+                android:fontFamily="@font/ibmplexsans_medium"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:padding="15dp"
@@ -78,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/et_login_password"
-                android:fontFamily="@font/playfair_medium"
+                android:fontFamily="@font/ibmplexsans_medium"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:inputType="textPassword"

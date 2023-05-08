@@ -41,6 +41,9 @@ public class SignUp extends AppCompatActivity {
         password_signup=findViewById(R.id.password_signup);
         btn_signup=findViewById(R.id.btn_signup);
         progressBar=findViewById(R.id.bar_reg);
+        EditText mEdit = findViewById(R.id.plusenamdua);
+        mEdit.setEnabled(false);
+
 
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +74,7 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull final Task<AuthResult> task) {
                         User user = new User(getNohp, getEmail, getPassword);
-                        FirebaseDatabase.getInstance().getReference("User").setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        FirebaseDatabase.getInstance().getReference().child("Pengguna").child("List").push().setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()) {

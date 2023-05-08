@@ -51,7 +51,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/playfair_medium"
+                android:fontFamily="@font/ibmplexsans_medium"
                 android:hint="@string/et_login_email"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
@@ -64,7 +64,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/playfair_medium"
+                android:fontFamily="@font/ibmplexsans_medium"
                 android:hint="@string/et_login_password"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"

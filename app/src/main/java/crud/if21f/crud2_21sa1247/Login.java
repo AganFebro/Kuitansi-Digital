@@ -58,6 +58,21 @@ public class Login extends AppCompatActivity {
             }
         };
 
+        Listener = new FirebaseAuth.AuthStateListener(){
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null && !TextUtils.isEmpty(user.getPhoneNumber())) {
+                    // user sudah pernah login menggunakan nomor telepon dan nomor telepon sudah terverifikasi
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    Toast.makeText(Login.this, "Welcome Back!", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    // kosong
+                }
+            }
+        };
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,7 +113,7 @@ public class Login extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                startActivity(new Intent(Login.this, SignUpOTP.class));
+                startActivity(new Intent(Login.this, SignUp.class));
             }
         });
 
