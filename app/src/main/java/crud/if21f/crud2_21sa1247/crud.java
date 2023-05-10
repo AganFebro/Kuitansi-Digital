@@ -105,6 +105,12 @@ public class crud extends AppCompatActivity {
 
         tgllahir = findViewById(R.id.tgllahir);
 
+        EditText edit = (EditText)findViewById(R.id.nim);
+        String input;
+        input = String.valueOf(edit.getText());
+        input = input.toUpperCase(); //converts the string to uppercase
+
+
         dateFormatter = new SimpleDateFormat("dd MMM YYYY");
         tgllahir.setOnClickListener(new View.OnClickListener() {
             @Override

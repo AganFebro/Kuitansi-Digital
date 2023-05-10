@@ -8,14 +8,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.GnssAntennaInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +50,7 @@ public class Login extends AppCompatActivity {
         signup_reg = findViewById(R.id.signup_reg);
 
         auth = FirebaseAuth.getInstance();
+
         Listener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -64,6 +68,20 @@ public class Login extends AppCompatActivity {
                 }
             }
         };
+
+        ImageView imageView = (ImageView) findViewById(R.id.github_link);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.setData(Uri.parse("https://github.com/AganFebro/Android-UTS-Fixed"));
+                getApplicationContext().startActivity(i);
+            }
+        });
+
+
+
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
